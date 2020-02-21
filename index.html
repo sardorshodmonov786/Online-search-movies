@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Movies catalog</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.0/css/bulma.min.css">
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+	
+	<section class="section">
+		<div class="container">
+			<h1 class="has-text-centered heading">Movies</h1>
+			<form class="search-form" action="http://www.omdbapi.com/?apikey=249e8962&s=" method="GET">
+				<div class="field has-addons">
+					<div class="control is-expanded">
+						<label class="is-sr-only" for="search-query-input">Search query</label>
+						<input class="input search-query-input" type="search" id="search-query-input" name="q" placeholder="Movie title">
+					</div>
+					<div class="control">
+						<button class="search-button button is-info" type="submit">
+							Search
+						</button>
+					</div>
+				</div>
+			</form>
+
+			<div class="columns">
+				<section class="column is-6">
+					<!-- RESULTS -->
+					<section class="block menu">
+						<ul class="search-results menu-list">
+						</ul>
+					</section>
+
+					<!-- NAVIGATION -->
+					<nav class="pagination is-centered">
+						<ul class="pagination-list">
+						</ul>
+					</nav>
+				</section>
+
+				<section class="movie-details column is-6">
+					<article class="movie card is-hidden">
+						<div class="columns is-marginless">
+							<div class="column is-4 is-paddingless">
+								<div class="card-image">
+									<img class="movie-poster" src="https://m.media-amazon.com/images/M/MV5BMTUyNzk3MjA1OF5BMl5BanBnXkFtZTcwMTE1Njg2MQ@@._V1_SX300.jpg">
+								</div><!-- card-image -->
+							</div><!-- column -->
+
+							<div class="column is-8">
+								<h2 class="title is-4"><span class="movie-title">The Incredible Hulk</span> (<span class="movie-year">2008</span>)</h2>
+								<p class="subtitle is-6">
+									<span class="movie-runtime">112 min</span> |
+									<span class="movie-rated">PG-13</span> |
+									<span class="movie-genres">Action, Adventure, Sci-Fi</span>
+								</p>
+								<div class="block">
+									<p><strong>Released:</strong> <span class="movie-release-date">13 Jun 2008</span></p>
+									<p><strong>Language:</strong> <span class="movie-language">English, Portuguese, Spanish</span></p>
+									<p><strong>Country:</strong> <span class="movie-country">USA</span></p>
+								</div>
+
+								<div class="level has-text-centered">
+									<div class="level-item">
+										<div>
+											<img src="img/metacritic-logo.png" alt="Metacritic Logo" width="50" height="50">
+											<p class="title metascore-rating">61</p>
+										</div>
+									</div><!-- level-item -->
+									<div class="level-item">
+										<div>
+											<img src="img/rotten-tomatoes-logo.png" alt="Rotten Tomatoes Logo" width="50" height="50">
+											<p class="title rt-rating">67%</p>
+										</div>
+									</div><!-- level-item -->
+									<div class="level-item">
+										<div>
+											<img src="img/imdb-logo.png" alt="IMDb Logo" width="50" height="50">
+											<p class="title imdb-rating">6.7</p>
+										</div>
+									</div><!-- level-item -->
+								</div><!-- level -->
+							</div><!-- column -->
+						</div><!-- columns -->
+
+						<div class="movie-info card-content">
+							<div class="movie-plot content">Bruce Banner, a scientist on the run from the U.S. Government, must find a cure for the monster he turns into, whenever he loses his temper.</div>
+							<p><strong>Director:</strong> <span class="movie-director">Louis Leterrier</span></p>
+							<p><strong>Writers:</strong> <span class="movie-writers">Zak Penn (screenplay), Zak Penn (screen story), Stan Lee (Marvel comic book), Jack Kirby (Marvel comic book)</span></p>
+							<p><strong>Stars:</strong> <span class="movie-stars">Edward Norton, Liv Tyler, Tim Roth, William Hurt</span></p>
+							<p><strong>Awards:</strong> <span class="movie-awards">1 win & 8 nominations.</span></p>
+						</div><!-- movie-info -->
+					</article><!-- movie -->
+				</section><!-- movie-details -->	
+			</div><!-- columns -->
+		</div><!-- container -->
+	</section>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
