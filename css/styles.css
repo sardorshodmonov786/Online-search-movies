@@ -36,3 +36,8 @@ ul .columns {
 .movie-details {
 	margin-top: 20px;
 }
+
+.movie-poster {
+	display: block;
+	width: 100%;
+}
