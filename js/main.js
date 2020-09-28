@@ -73,7 +73,7 @@ $(document).ready(function () {
 
 	var getMovieInfo = function () {
 		var thisButton = $(this);
-		var movieLink = 'http://www.omdbapi.com/?apikey=249e8962&i=' + thisButton.data('imdb-id');
+		var movieLink = 'https://www.omdbapi.com/?apikey=249e8962&i=' + thisButton.data('imdb-id');
 
 		var showMovieInfo = function (response) {
 			var movie = $('.movie');
